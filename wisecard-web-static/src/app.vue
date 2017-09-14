@@ -136,12 +136,15 @@
               }, this.config.cfg.rpt );
             }
             this.status.status = "maintain";
-          }else{
+          }else if( nextpage=="transpage" ){
             window.clearInterval( this.rpttimer );
             this.rpttimer = -1;
             this.status.status = "running";
+          }else{
+            this.log.e( "app", "pagechange", "unknown page" );
           }
           console.log("跳转到("+nextpage+")页面");
+          this.log.i("app", "pagechange", "goto " + nextpage + " page");
           this.showpage = nextpage;
         }
       },
