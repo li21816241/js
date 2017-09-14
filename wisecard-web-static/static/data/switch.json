@@ -1,0 +1,26 @@
+[
+  {
+    "name": "SWITCH-1",
+    "success": 1000,
+    "fails": 1,
+    "status": "online"
+  },
+  {
+    "name": "SWITCH-2",
+    "success": 5000,
+    "fails": 0,
+    "status": "online"
+  },
+  {
+    "name": "SWITCH-3",
+    "success": 100,
+    "fails": 0,
+    "status": "offline"
+  },
+  {
+    "name": "SWITCH-4",
+    "success": 500,
+    "fails": 0,
+    "status": "online"
+  }
+]

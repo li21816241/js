@@ -1,0 +1,26 @@
+[
+  {
+    "id": "001",
+    "question": "how to apply",
+    "type": "001",
+    "status": "01"
+  },
+  {
+    "id": "002",
+    "question": "what Materials needed",
+    "type": "002",
+    "status": "02"
+  },
+  {
+    "id": "003",
+    "question": "loan form bank",
+    "type": "001",
+    "status": "01"
+  },
+  {
+    "id": "004",
+    "question": "how to get my profile",
+    "type": "002",
+    "status": "02"
+  }
+]

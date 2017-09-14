@@ -1,0 +1,37 @@
+[
+  {
+    "sender": "jack",
+    "message": "Your application form(ID:?) is rejected",
+    "content": "12345;78424;3241",
+    "createdTime": "2016-11-12 11:37",
+    "status": "read"
+  },
+  {
+    "sender": "daniel",
+    "message": "Your application form(ID:?) is approved",
+    "content": "12345;78424;3241",
+    "createdTime": "2016-11-13 11:37",
+    "status": "unread"
+  },
+  {
+    "sender": "daniel",
+    "message": "Your application form(ID:12929923) is approved",
+    "content": "",
+    "createdTime": "2016-11-13 11:37",
+    "status": "read"
+  },
+  {
+    "sender": "daniel",
+    "message": "Your application form(ID:12929922) is approved",
+    "content": "",
+    "createdTime": "2016-11-13 11:37",
+    "status": "unread"
+  },
+  {
+    "sender": "daniel",
+    "message": "Your application form(ID:12929920) is rejected",
+    "content": "",
+    "createdTime": "2016-11-13 11:37",
+    "status": "unread"
+  }
+]

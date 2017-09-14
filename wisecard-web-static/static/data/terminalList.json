@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sddsfsdfsfsdf",
+    "terminalId":"terminal123",
+    "type":"Issuer",
+    "memberName": "lisi",
+    "status": "00", 
+    "samcardId": "123456",
+    "manufacture": "Yangon",
+      "createdTime": "2017-01-02"
+  },
+  {
+    "id": "123456ffff",
+    "terminalId":"terminal888",
+    "type":"Acquirer", 
+    "memberName": "zhangsan",
+    "status": "01",
+    "samcardId": "111111",
+    "manufacture": "Yangon",
+    "createdTime": "2017-01-02"
+  }
+]

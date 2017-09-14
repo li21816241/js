@@ -1,0 +1,12 @@
+[
+  {
+    "name": "JOB-1",
+    "desc": "Job for dealing with Embossing Files",
+    "status": "success"
+  },
+  {
+    "name": "JOB-2",
+    "desc": "Job for clearance",
+    "status": "in-progress"
+  }
+]

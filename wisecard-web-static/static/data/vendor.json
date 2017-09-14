@@ -1,0 +1,63 @@
+{
+  "totalCount": 8,
+  "pageCount": 2,
+  "currentPage": 1,
+  "pageSize": 2,
+  "offset": 0,
+  "result": [
+    {
+      "createdBy": "admin",
+      "createdTime": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "updatedBy": "admin",
+      "updatedTime": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "version" : "CONFIGURATION 14212131",
+      "model":"X-123ASD",
+      "id": "sddsfsdfsdf",
+      "vendorName": "AYA Bank",
+      "cardType": "shenda",
+      "protocol":"ISO-14443",
+      "cardVender": "100",
+      "chipVender": "5",
+      "platform": "default",
+      "certificate": [
+        "NO",
+        "EAL4+",
+        "EAL5+"
+      ],
+      "status": "Uncertified"
+    },
+    {
+      "createdBy": "admin",
+      "createdTime": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "updatedBy": "admin",
+      "updatedTime": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "id": "sddsfsdfsdf",
+      "version" : "CONFIGURATION 1232213",
+      "model":"X-SFS233",
+      "vendorName": "AYA Bank",
+      "protocol":"ISO-14443",
+      "cardType": "shenda",
+      "cardVender": "94",
+      "chipVender": "6",
+      "platform": "java",
+      "certificate": [
+        "NO",
+        "EAL4+",
+        "EAL5+"
+      ],
+      "status": "Certified"
+    }
+  ]
+}

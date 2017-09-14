@@ -1,0 +1,106 @@
+[{
+  "province": "AYEYARWADY",
+  "name": "common.region-ayeyarwady",
+  "city": [{
+    "city": "AYEYARWADY-PATHEIN",
+    "name": "common.city-ayeyarwady-pathein"
+  }]
+},{
+  "province": "BAGO",
+  "name": "common.region-bago",
+  "city": [{
+    "city": "BAGO-BAGO",
+    "name": "common.city-bago-bago"
+  }]
+},{
+  "province": "CHIN",
+  "name": "common.region-chin",
+  "city": [{
+    "city": "CHIN-HAKHA",
+    "name": "common.city-chin-hakha"
+  }]
+},{
+  "province": "KACHIN",
+  "name": "common.region-kachin",
+  "city": [{
+    "city": "KACHIN-MYITKYINA",
+    "name": "common.city-kachin-myitkyina"
+  }]
+},{
+  "province": "KAYAH",
+  "name": "common.region-kayah",
+  "city": [{
+    "city": "KAYAH-LOIKAW",
+    "name": "common.city-kayah-loikaw"
+  }]
+},{
+  "province": "KAYIN",
+  "name": "common.region-kayin",
+  "city": [{
+    "city": "KAYIN-PA-AN",
+    "name": "common.city-kayin-pa-an"
+  }]
+},{
+  "province": "MAGWAY",
+  "name": "common.region-magway",
+  "city": [{
+    "city": "MAGWAY-MAGWE",
+    "name": "common.city-magway-magwe"
+  }]
+},{
+  "province": "MANDALAY",
+  "name": "common.region-mandalay",
+  "city": [{
+    "city": "MANDALAY-MANDALAY",
+    "name": "common.city-mandalay-mandalay"
+  }]
+},{
+  "province": "MON",
+  "name": "common.region-mon",
+  "city": [{
+    "city": "MON-MAWLAMYAING",
+    "name": "common.city-mon-mawlamyaing"
+  }]
+},{
+  "province": "RAKHINE",
+  "name": "common.region-rakhine",
+  "city": [{
+    "city": "RAKHINE-SITTWE",
+    "name": "common.city-rakhine-sittwe"
+  }]
+},{
+  "province": "SHAN",
+  "name": "common.region-shan",
+  "city": [{
+    "city": "SHAN-TAUNGGYI",
+    "name": "common.city-shan-taunggyi"
+  }]
+},{
+  "province": "SAGAING",
+  "name": "common.region-sagaing",
+  "city": [{
+    "city": "SAGAING-SAGAING",
+    "name": "common.city-sagaing-sagaing"
+  }]
+},{
+  "province": "TANINTHARYI",
+  "name": "common.region-tanintharyi",
+  "city": [{
+    "city": "",
+    "name": "common.city-tanintharyi-dawei"
+  }]
+},{
+  "province": "YANGON",
+  "name": "common.region-yangon",
+  "city": [{
+    "city": "YANGON-YANGON",
+    "name": "common.city-yangon-yangon"
+  }]
+},{
+  "province": "NAYPYIDAW",
+  "name": "common.region-",
+  "city": [{
+    "city": "NAYPYIDAW-NAYPYIDAW",
+    "name": "common.city-naypyidaw-naypyidaw"
+  }]
+}]

@@ -1,0 +1,57 @@
+{
+  "totalCount": 2,
+  "pageCount": 1,
+  "currentPage": 1,
+  "pageSize": 10,
+  "offset": 0,
+  "result": [{
+      "createdBy": "admin",
+      "createdTime": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "updatedBy": "admin",
+      "updatedTime": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "id": "1",
+      "name": "Aya Bank",
+      "code": "001",
+      "type": "01",
+      "nature": "01",
+      "address": "Pyane Ike Klqf Jiia Lqrjf Anc Fqer rra 330",
+      "contact": "Pyan Thaai",
+      "amount": 500000.00,
+      "registerDate": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "status": "00"
+    },
+    {
+      "createdBy": "admin",
+      "createdTime": {
+        "epochSecond": 1487042400,
+        "nano": 419000000
+      },
+      "updatedBy": "admin",
+      "updatedTime": {
+        "epochSecond": 1487042400,
+        "nano": 419000000
+      },
+      "id": "2",
+      "name": "ABC Bank",
+      "code": "500",
+      "type": "02",
+      "nature": "01",
+      "address": "Kekt Iqf Accd Wqdd Jlae Anc Fqer rra 120",
+      "contact": "Jqyd Nyq",
+      "amount": 100000.00,
+      "registerDate": {
+        "epochSecond": 1487042400,
+        "nano": 418000000
+      },
+      "status": "00"
+    }]
+}

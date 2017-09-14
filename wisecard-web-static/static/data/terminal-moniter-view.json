@@ -1,0 +1,571 @@
+{
+    "totalCount": 9,
+    "pageCount": 1,
+    "currentPage": 1,
+    "pageSize": 10,
+    "offset": 0,
+    "result": [{
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487555367,
+            "nano": 760000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1489118672,
+            "nano": 186000000
+        },
+        "id": "e5d16156-377d-497b-92aa-2ff4f542b5dc",
+        "terminalId": "s8d4f1dsf5sd4f5sdf15af",
+        "type": "default",
+        "status": "01",
+        "blackUpdatetime": {
+            "epochSecond": 1487555367,
+            "nano": 760000000
+        },
+        "samcardId": "证书",
+        "memberId": "1",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "1",
+            "name": "AYA Bank",
+            "type": "01",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+2909201",
+            "fax": null,
+            "email": "admin.abc@ayabank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "01",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "生产商",
+        "modelNumber": "EWLIRJJ-412151",
+        "firmwareVersion": "4.151521",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487226252,
+            "nano": 231000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1487229323,
+            "nano": 647000000
+        },
+        "id": "bd1b07f0-e77e-46c9-b030-a915ad291d16",
+        "terminalId": "qwer",
+        "type": "acuqire",
+        "status": "00",
+        "blackUpdatetime": null,
+        "samcardId": null,
+        "memberId": "1",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "1",
+            "name": "AYA Bank",
+            "type": "01",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+2909201",
+            "fax": null,
+            "email": "admin.abc@ayabank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "01",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "qwe",
+        "modelNumber": "qwe",
+        "firmwareVersion": "qwe",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487216874,
+            "nano": 825000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1489118672,
+            "nano": 187000000
+        },
+        "id": "3649ba1a-78d7-49b3-b9c1-c091b90c5638",
+        "terminalId": "aaaaaaaaaaaaaaaaaaaaaa",
+        "type": "acuqire",
+        "status": "00",
+        "blackUpdatetime": {
+            "epochSecond": 1487671468,
+            "nano": 0
+        },
+        "samcardId": "bbbbbbbbbbbbbbb",
+        "memberId": "2",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "2",
+            "name": "ABC Bank",
+            "type": "02",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+3339281001",
+            "fax": null,
+            "email": "admin.abc@abcbank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "03",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "ccccccccccccc",
+        "modelNumber": "123",
+        "firmwareVersion": "321",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487216851,
+            "nano": 894000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1489118672,
+            "nano": 188000000
+        },
+        "id": "e455d33c-2451-4269-a707-79e3b325ed2c",
+        "terminalId": "321",
+        "type": "acuqire",
+        "status": "00",
+        "blackUpdatetime": {
+            "epochSecond": 1488276273,
+            "nano": 0
+        },
+        "samcardId": "123",
+        "memberId": "2",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "2",
+            "name": "ABC Bank",
+            "type": "02",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+3339281001",
+            "fax": null,
+            "email": "admin.abc@abcbank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "03",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "123",
+        "modelNumber": "123",
+        "firmwareVersion": "321",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487157736,
+            "nano": 123000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1489118672,
+            "nano": 188000000
+        },
+        "id": "000720ea-e59d-4981-9b42-2ec7ec13da37",
+        "terminalId": "s8d4f1dsf5sd4f5sdf15af",
+        "type": "default",
+        "status": "01",
+        "blackUpdatetime": {
+            "epochSecond": 1487157736,
+            "nano": 124000000
+        },
+        "samcardId": null,
+        "memberId": "1",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "1",
+            "name": "AYA Bank",
+            "type": "01",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+2909201",
+            "fax": null,
+            "email": "admin.abc@ayabank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "01",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "生产商",
+        "modelNumber": "EWLIRJJ-412151",
+        "firmwareVersion": "4.151521",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487157323,
+            "nano": 476000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1487223096,
+            "nano": 952000000
+        },
+        "id": "9fb4cdea-834a-4de4-9e89-a099cba50ec5",
+        "terminalId": "s8d4f1dsf5sd4f5sdf15af",
+        "type": "default",
+        "status": "00",
+        "blackUpdatetime": {
+            "epochSecond": 1487157323,
+            "nano": 476000000
+        },
+        "samcardId": null,
+        "memberId": "1",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "1",
+            "name": "AYA Bank",
+            "type": "01",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+2909201",
+            "fax": null,
+            "email": "admin.abc@ayabank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "01",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "生产商",
+        "modelNumber": "EWLIRJJ-41215112",
+        "firmwareVersion": "4.151521",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "admin",
+        "createdTime": {
+            "epochSecond": 1487154856,
+            "nano": 445000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1489118672,
+            "nano": 190000000
+        },
+        "id": "e1290028-1924-47bd-8db0-307612d6f91f",
+        "terminalId": "165413215412045",
+        "type": "default",
+        "status": "00",
+        "blackUpdatetime": {
+            "epochSecond": 1487154856,
+            "nano": 446000000
+        },
+        "samcardId": "证书",
+        "memberId": "1",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "1",
+            "name": "AYA Bank",
+            "type": "01",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+2909201",
+            "fax": null,
+            "email": "admin.abc@ayabank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "01",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "生产商",
+        "modelNumber": "EWLIRJJ-412151",
+        "firmwareVersion": "4.151521",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "sdf",
+        "createdTime": {
+            "epochSecond": 1486990997,
+            "nano": 643000000
+        },
+        "updatedBy": "supervisor",
+        "updatedTime": {
+            "epochSecond": 1489005385,
+            "nano": 298000000
+        },
+        "id": "5ff4bd9c-ee05-4340-a489-d5e5066fd11e",
+        "terminalId": "sdf",
+        "type": "sf",
+        "status": "01",
+        "blackUpdatetime": {
+            "epochSecond": 1486990997,
+            "nano": 644000000
+        },
+        "samcardId": "sdf",
+        "memberId": "1",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "1",
+            "name": "AYA Bank",
+            "type": "01",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+2909201",
+            "fax": null,
+            "email": "admin.abc@ayabank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "01",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "sdf",
+        "modelNumber": "ETERRR-4541165121",
+        "firmwareVersion": "4.1822485.5",
+        "list": null,
+        "dolarSystem": null
+    },
+    {
+        "createdBy": "sdf",
+        "createdTime": {
+            "epochSecond": 1486988586,
+            "nano": 123000000
+        },
+        "updatedBy": "admin",
+        "updatedTime": {
+            "epochSecond": 1489118672,
+            "nano": 198000000
+        },
+        "id": "a8bcbfac-36da-418d-b040-ffd8942f953d",
+        "terminalId": "sdf",
+        "type": "sf",
+        "status": "00",
+        "blackUpdatetime": {
+            "epochSecond": 1486988586,
+            "nano": 123000000
+        },
+        "samcardId": "sdf",
+        "memberId": "2",
+        "member": {
+            "createdBy": "admin",
+            "createdTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "updatedBy": "admin",
+            "updatedTime": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "id": "2",
+            "name": "ABC Bank",
+            "type": "02",
+            "contact": null,
+            "mobile": null,
+            "telephone": "+3339281001",
+            "fax": null,
+            "email": "admin.abc@abcbank.com",
+            "province": "YGN",
+            "city": "YGN",
+            "address": "ASDKFJADSK ADKFJASDF ASDFADS 30 ADSFA, 12KJASDF9 ADF ASDF",
+            "postCode": null,
+            "webSite": null,
+            "registerDate": {
+                "epochSecond": 1488364379,
+                "nano": 0
+            },
+            "status": "03",
+            "contract": null,
+            "remark": null,
+            "certificates": null,
+            "margins": null,
+            "commission": null,
+            "dolarSystem": null
+        },
+        "manufactureName": "sdf",
+        "modelNumber": "ETERRR-4541165121",
+        "firmwareVersion": "4.1822485.5",
+        "list": null,
+        "dolarSystem": null
+    }]
+}

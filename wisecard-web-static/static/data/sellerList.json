@@ -1,0 +1,44 @@
+[
+  {
+    "code": "0232",
+    "corporateName": "Oracle company",
+    "contacts": "张三",
+    "tel": "0735 45655522",
+    "mobile": "1356895589556",
+    "email": "cenanredFx@gmail.com",
+    "fax": "4525222",
+    "country": "China",
+    "province": "Guangzhou",
+    "city": "shi",
+    "url": "www.baidu.com",
+    "address": "address",
+    "postcode": "0215522",
+    "protocol": "0512541",
+    "statusType": [
+      "default",
+      "age"
+    ],
+    "remark": "remark"
+  },
+  {
+    "code": "0232",
+    "corporateName": "Oracle company",
+    "contacts": "张三",
+    "tel": "0735 45655522",
+    "mobile": "1356895589556",
+    "email": "cenanredFx@gmail.com",
+    "fax": "4525222",
+    "country": "China",
+    "province": "Guangzhou",
+    "city": "shi",
+    "url": "www.baidu.com",
+    "address": "address",
+    "postcode": "0215522",
+    "protocol": "0512541",
+    "statusType": [
+      "default",
+      "age"
+    ],
+    "remark": "remark"
+  }
+]
