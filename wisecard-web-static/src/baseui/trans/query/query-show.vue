@@ -1,10 +1,11 @@
 <template><section>
   <section>
-    <component v-if="this.$route.params" :is="selectui" ></component>
+    dkjfldkajfldk
   </section>
 </template>
 <script>
 export default{
+  props:[],
   created(){
   },
   mounted(){

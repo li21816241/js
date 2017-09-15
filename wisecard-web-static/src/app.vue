@@ -39,14 +39,21 @@
           modules:[{
               name:'cardreader',
               id:'',
-              type:''
+              type:0 //0一般设备，故障不影响运行,1重要设备,故障提示类, 2必须设备
             },{
               name:'pinpad',
               id:'',
-              type:''
+              type:2
             }
           ],
-          trans:{
+          trans:[{
+            name:'pretrans',
+            pagelist:'',
+            module:'common',
+            type:1,// 按位标识：第1位 1:直接交易，不需要进卡,0 需要进卡 第2位 1:不需要网络正常的交易,0依赖网络进行较 第3位: 1:不需要运行cando? 0:需要运行cando 第4位 1:需要提示界面提示类,0不需要
+            cando:''
+          }],
+          application:{
             devid:'0123456789',
             bankid:'chinabank',
             service:'127.0.0.1/cmt/'

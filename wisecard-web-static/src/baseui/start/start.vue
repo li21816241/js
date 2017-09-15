@@ -2,14 +2,15 @@
   <section>
     <span>dkfdkfdl</span>
     <text text="启动应用"></text>
+    <component ref="mainview" :is="showpage" id="mianview"></component>
   </section>
 </template>
 <script>
+import Vue from 'vue'
 export default{
   props:['devs'],
   created(){
     this.getconfig();
-    //this.getMasterKey(true);
   },
   mounted(){
   },
@@ -25,12 +26,38 @@ export default{
           mackey:{
             status:false
           }
-        }
+        },
+        curpagelist:[],
+        showpage:''
     }
   },
   computed:{
   },
   methods:{
+    loadtrans(){
+      {
+        let trans = require( "../trans/" + "common" + "/index.js" );
+        Vue.use(trans.default);
+        if( trans.default.getflow != null ){
+          this.config.trans[i].pagelist = trans.default.getflow();
+        }
+      }
+      for(let i = 0, j = 0; i < this.config.trans.length; i++ ){
+        let trans = require( "../trans/" + this.config.trans[ i ].module + "/index.js" );
+        Vue.use(trans.default);
+        if( trans.default.getflow != null ){
+          this.config.trans[i].pagelist = trans.default.getflow();
+        }else{
+          this.log.e( "start", "loadtrans", "trans(" + this.config.trans[i].name + ") not define listpage" );
+          continue;
+        }
+        if( trans.default.cando != null ){
+          this.config.trans[i].cando = trans.default.cando;   
+        }else{
+          this.config.trans[i].cando=function(){ return {tip:'',status:"ok"}}; };
+        }
+      }
+    },
     devevent(dev, type, cmd, data){
       console.log("接收到分发的设备事件");
       if( dev == "pinpad" && cmd=="open" && data.result == 0 ){
@@ -46,7 +73,7 @@ export default{
       this.$http.get( "/rest/getconfig" ).then( function( res ){
         console.log( "ok" );
         if( 0 == me.setconfig( res  ) ){
-          
+          this.loadtrans();
         }else{
           setTimeout(function() {
             me.getconfig();

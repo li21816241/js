@@ -4,6 +4,10 @@ const querytrans = {
     install: function(Vue) {
         Vue.component("querytip", querytip)
         Vue.component("queryshow", queryshow)
+    },
+    getflow: function() {
+        return ['querytip', 'queryshow'];
     }
 };
+
 export default querytrans;

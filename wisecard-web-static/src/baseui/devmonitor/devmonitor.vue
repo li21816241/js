@@ -11,7 +11,6 @@ export default{
     
   },
   mounted(){
-    console.log(this);
   },
   data(){
     return{
@@ -41,7 +40,6 @@ export default{
                 window[name](me);
                 me.$devs[index].obj=document.getElementById(module.name );
                 me.$devs[index].loaded=true;
-                console.log(me.$devs);
                 me.log.i( "devmonitor", "script::onload", "(" +module.name + ") load finash" );
               }
               script.onload = script.onreadystatechange = null; 

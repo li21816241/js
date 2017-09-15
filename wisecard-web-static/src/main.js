@@ -39,8 +39,6 @@ Vue.use(pausepage);
 import exitpage from './baseui/exit'
 Vue.use(exitpage);
 
-import transpage from './baseui/transwrap'
-Vue.use(transpage);
 
 
 const router = new VueRouter({
