@@ -1,7 +1,7 @@
-const bigbutton = {
+import button2 from './button2.vue'
+const enterbutton = {
     install: function(Vue) {
-        Vue.component("button-big", bigbutton);
+        Vue.component("enterbutton", button2);
     }
 };
-
-export default bigbutton;
+export default enterbutton;

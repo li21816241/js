@@ -56,7 +56,6 @@ export default{
         }else{
           this.config.trans[i].cando=function(){ return {tip:'',status:"ok"}}; };
         }
-      }
     },
     devevent(dev, type, cmd, data){
       console.log("接收到分发的设备事件");
