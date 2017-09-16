@@ -34,7 +34,6 @@ export default{
           var script= document.createElement('script'); 
           script.type= 'text/javascript'; 
           script.onload = script.onreadystatechange = function() {
-            debugger;
             if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete" ) {
                 var name = '$'+module.name;
                 window[name](me);
@@ -49,6 +48,7 @@ export default{
           })( this.config.modules[ i ], i);     
       }
       this.i("devcreate", "create devices end" );
+      this.triggerEvent( "pinpad", "pinpad", "open", {id:0,result:0,data:{}} );
     },
     triggerEvent( witch, type, cmd, data ){
       this.d("triggerEvent", witch + "," + type + "," + cmd + "," + data );

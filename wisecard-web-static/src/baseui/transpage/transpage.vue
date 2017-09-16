@@ -15,6 +15,7 @@ export default{
   },
   destroyed(){
     this.log.i("transpage", "destroyed", "trans end" );
+    
   },
   mounted(){
     console.log( "进入流程" );

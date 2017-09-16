@@ -9,9 +9,6 @@ const commontrans = {
     },
     getflow: function() {
         return ['tip', 'inputpin', 'selects'];
-    },
-    cando: function(vue) {
-
     }
 };
 
