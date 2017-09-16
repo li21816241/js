@@ -1,0 +1,32 @@
+{
+    "modules":[
+        {
+            "name":"cardreader",
+            "id":"cardreader",
+            "type":0
+        },{
+            "name":"pinpad",
+            "id":"0",
+            "type":2
+        }
+    ],
+    "trans":[
+        {
+            "name":"pretrans",
+            "pagelist":[],
+            "module":"common",
+            "type":1,
+            "cando":""
+        }
+    ],
+    "application":{
+        "devid":"0123456789",
+        "bankid":"chinabank",
+        "service":"127.0.0.1/cmt/"
+    },
+    "cfg":{
+        "rpt":30000,
+        "maxcount":1,
+        "monitor":"127.0.0.1/cmt"
+    }
+}
