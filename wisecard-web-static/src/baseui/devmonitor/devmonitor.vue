@@ -48,7 +48,6 @@ export default{
           })( this.config.modules[ i ], i);     
       }
       this.i("devcreate", "create devices end" );
-      this.triggerEvent( "pinpad", "pinpad", "open", {id:0,result:0,data:{}} );
     },
     triggerEvent( witch, type, cmd, data ){
       this.d("triggerEvent", witch + "," + type + "," + cmd + "," + data );

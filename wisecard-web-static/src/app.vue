@@ -55,6 +55,11 @@
             return this;
           }
       };
+      Vue.prototype.status={
+        netstatus:{
+          status:1,
+        }
+      }
       document.onkeydown=this.keydown;
     },
     mounted(){

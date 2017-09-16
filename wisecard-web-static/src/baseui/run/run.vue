@@ -25,11 +25,10 @@ export default{
     }
   },
   mounted(){
-    let me = this;
     this.timer = setInterval( this.transcheck, 10000);
   },
   destroyed(){
-    clearInterval( timer );
+    clearInterval( this.timer );
   },
   data(){
     return {
