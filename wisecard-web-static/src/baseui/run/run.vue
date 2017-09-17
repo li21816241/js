@@ -3,7 +3,11 @@
     <div>
       <div>
         <div id="ad"></div>
-        <div id="buttons"></div>
+        <div id="buttons">
+          <div v-for="item in this.showtrans">
+            <enterbutton :caption="item.name" v-on:click="click"></enterbutton>
+          </div>
+        </div>
       </div>
       <div id="infotip"></div>
     </div>
@@ -49,11 +53,14 @@ export default{
   computed:{
   },
   methods:{
+    click(name){
+      this.onselecttrans( name )
+    },
     devevent( dev, type, cmd, data ){
 
     },
     onselecttrans( button ){
-      this.$emit( "pagechagne", "transpage", "trans", button );
+      this.$emit( "pagechange", "transpage", "trans", {witch:button} );
     },
     oncardin(){
       this.$emit( "pagechange", "transpage", "card", 0 );

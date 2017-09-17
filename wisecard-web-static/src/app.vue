@@ -2,7 +2,7 @@
 </style>
 <template>
   <div class="full" id="level1">
-    <component ref="mainview" :is="showpage" id="mianview" :devs="devs" v-on:pagechange="pagechange" ></component>
+    <component ref="mainview" :is="showpage" id="mianview" :devs="devs" v-on:pagechange="pagechange" :pageparam="pageparam" ></component>
     <component ref="devwrap" :is="devmonitor" id="devtest" style="display:none" v-on:devevent="devevent" v-on:success="success" ></component>
   </div>
 </template>
@@ -77,7 +77,8 @@
           control:'',
           pause:''
         },
-        rpttimer:0
+        rpttimer:0,
+        pageparam:{}
       }
     },
     methods:{
@@ -128,6 +129,10 @@
             window.clearInterval( this.rpttimer );
             this.rpttimer = -1;
             this.status.status = "running";
+            this.pageparam = {
+              from:reason,
+              data:data
+            }
           }else{
             this.log.e( "app", "pagechange", "unknown page" );
           }

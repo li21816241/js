@@ -1,7 +1,7 @@
-import transpage from './transpage.vue'
-const transwrap = {
+import transwrap from './transpage.vue'
+const transpage = {
     install: function(Vue) {
-        Vue.component("transwrap", transpage)
+        Vue.component("transpage", transwrap)
     }
 };
-export default transwrap;
+export default transpage;

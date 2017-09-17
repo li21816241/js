@@ -7,8 +7,10 @@
 </template>
 <script>
 export default{
-  props:['transindex'],
+  props:['transindex', 'pageparam'],
   created(){
+    console.log(this.prarm);
+    this.log.d( "transpage","created", "param" + JSON.stringify(this.prarm) );
     this.curflow = this.config.trans;
     this.showpage = this.curflow[ i ].pagelist[ 0 ];
     this.log.i("transpage", "created", "trans begin by " + this.config.trans[transindex].name );
@@ -28,6 +30,7 @@ export default{
   data(){
     return{
       curflow:'',
+      prarm:this.pageparam
     }
   },
   computed:{
