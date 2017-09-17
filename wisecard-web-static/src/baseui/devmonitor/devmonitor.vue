@@ -21,14 +21,18 @@ export default{
   methods:{
     devcreate(){
       this.i("devcreate", "create devices begin" );
-      Vue.prototype.$devs = new Array(0);
+      Vue.prototype.$devs = {
+        getdevs:function(){
+          return this;
+        }
+      };
       var me = this;
       for( var i = 0; i < this.config.modules.length; i++ ){
-        this.$devs.push({
-                name:module.name,
-                obj:'',
-                loaded:false
-              });
+        this.$devs.getdevs()[this.config.modules[i].name] = {
+          name:module.name,
+          obj:'',
+          loaded:false
+        };
         ( function( module, index ){
           var dom= document.getElementById("devactivexs");
           var script= document.createElement('script'); 
@@ -37,8 +41,9 @@ export default{
             if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete" ) {
                 var name = '$'+module.name;
                 window[name](me);
-                me.$devs[index].obj=document.getElementById(module.name );
-                me.$devs[index].loaded=true;
+                document.getElementById( module.name ).open('0');
+                me.$devs.getdevs()[module.name].obj=document.getElementById(module.name );
+                me.$devs.getdevs()[module.name].loaded=true;
                 me.log.i( "devmonitor", "script::onload", "(" +module.name + ") load finash" );
               }
               script.onload = script.onreadystatechange = null; 
@@ -50,7 +55,7 @@ export default{
       this.i("devcreate", "create devices end" );
     },
     triggerEvent( witch, type, cmd, data ){
-      this.d("triggerEvent", witch + "," + type + "," + cmd + "," + data );
+      this.d("triggerEvent", witch + "," + type + "," + cmd + "," + JSON.stringify(data) );
       this.$emit("devevent", witch, type, cmd, data );
     },
     exit(){

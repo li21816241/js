@@ -87,7 +87,6 @@
         this.$refs.mainview.devevent( dev, type, cmd, data );
       },
       pagechange( nextpage, reason, data ){
-        debugger;
         let me = this;
         if( this.status.exit == true ){
           console.log( "停止作业，退出系统" );

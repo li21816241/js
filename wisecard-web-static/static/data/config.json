@@ -3,11 +3,19 @@
         {
             "name":"cardreader",
             "id":"cardreader",
-            "type":0
+            "type":1
         },{
             "name":"pinpad",
             "id":"0",
             "type":2
+        },{
+            "name":"receipt",
+            "id":"0",
+            "type":1
+        },{
+            "name":"a4printer",
+            "id":"0",
+            "type":1
         }
     ],
     "trans":[
@@ -15,6 +23,20 @@
             "name":"pretrans",
             "pagelist":[],
             "module":"common",
+            "type":1,
+            "cando":""
+        },
+        {
+            "name":"query",
+            "pagelist":[],
+            "module":"query",
+            "type":1,
+            "cando":""
+        },
+        {
+            "name":"issusecard",
+            "pagelist":[],
+            "module":"card",
             "type":1,
             "cando":""
         }

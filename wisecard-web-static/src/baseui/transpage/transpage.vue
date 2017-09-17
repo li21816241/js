@@ -13,13 +13,13 @@ export default{
     this.showpage = this.curflow[ i ].pagelist[ 0 ];
     this.log.i("transpage", "created", "trans begin by " + this.config.trans[transindex].name );
   },
-  destroyed(){
-    this.log.i("transpage", "destroyed", "trans end" );
-    
-  },
   mounted(){
     console.log( "进入流程" );
-    this.log.i( "transpage", "mounted", "trans begine" );
+    this.log.i( "transpage", "mounted", "trans begin" );
+    debugger;
+    if( this.$devs.getdevs().cardreader != null ){
+      alert( 'ok' );
+    }
   },
   destroyed(){
     console.log( "退出流程" );

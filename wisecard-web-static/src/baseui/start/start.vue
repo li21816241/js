@@ -40,7 +40,7 @@ export default{
         return;
       for(let i = 0, j = 1; i < this.config.trans.length; i++ ){
         console.log("加载业务")
-        console.log( this.config.trans[i]);
+        this.log.d( JSON.stringify( this.config.trans[i]) );
         this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[i].name + ")begin" );
         try{
           let trans = require( "../trans/" + this.config.trans[ i ].module + "/index.js" );
@@ -69,7 +69,6 @@ export default{
       if( dev == "pinpad" && cmd=="open" && data.result == 0 ){
         this.getMasterKey();
       }
-      this.success( "runpage", 0, '' );
     },
     success( nextpage, reason, data ){
       this.$emit("pagechange", nextpage, reason, data );
@@ -108,9 +107,7 @@ export default{
       });
     },
     startsuccess(){
-      if( this.key.masterkey.status == true && this.key.pinkey.status == true && this.key.mackey.status == true &&
-       1 ){
-         
+      if( this.key.masterkey.status == true && this.key.pinkey.status == true && this.key.mackey.status == true ){
          this.success( "runpage", 0, 0 );
        }
     },
@@ -149,6 +146,7 @@ export default{
           console.log( "下载PIN秘钥到键盘成功");
           me.log.i( "start", "getWorkKey", "DownLoad PinKey sucess" );
           me.key.pinkey.status = true;
+          me.startsuccess();
         }else{
           console.log( "下载PIN秘钥到键盘失败");
           setTimeout(function() {

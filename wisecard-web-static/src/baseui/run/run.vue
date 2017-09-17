@@ -1,6 +1,12 @@
 <template><section>
   <section>
-    
+    <div>
+      <div>
+        <div id="ad"></div>
+        <div id="buttons"></div>
+      </div>
+      <div id="infotip"></div>
+    </div>
   </section>
 </template>
 <script>
@@ -26,6 +32,7 @@ export default{
   },
   mounted(){
     this.timer = setInterval( this.transcheck, 10000);
+    
   },
   destroyed(){
     clearInterval( this.timer );
@@ -35,7 +42,8 @@ export default{
       notify:{},
       showtrans:{},
       testtrans:[],
-      timer:0
+      timer:0,
+      transcount:0
     };
   },
   computed:{
