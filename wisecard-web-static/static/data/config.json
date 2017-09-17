@@ -18,29 +18,29 @@
             "type":1
         }
     ],
-    "trans":[
-        {
+    "trans":{
+        "pretrans":{
             "name":"pretrans",
             "pagelist":[],
             "module":"common",
-            "type":0,
+            "type":4,
             "cando":""
         },
-        {
+        "query":{
             "name":"query",
             "pagelist":[],
             "module":"query",
             "type":0,
             "cando":""
         },
-        {
+        "issusecard":{
             "name":"issusecard",
             "pagelist":[],
             "module":"card",
-            "type":1,
+            "type":5,
             "cando":""
         }
-    ],
+    },
     "application":{
         "devid":"0123456789",
         "bankid":"chinabank",
