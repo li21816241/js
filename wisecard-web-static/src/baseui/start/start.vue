@@ -8,7 +8,6 @@
 <script>
 import Vue from 'vue'
 export default{
-  props:['devs'],
   created(){
     this.getconfig();
   },
@@ -38,29 +37,29 @@ export default{
     loadtrans(){
       if( this.loadtransstatus == true )
         return;
-      for(let i = 0, j = 1; i < this.config.trans.length; i++ ){
+      for( let key in this.config.trans ){
         console.log("加载业务")
-        this.log.d( JSON.stringify( this.config.trans[i]) );
-        this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[i].name + ")begin" );
+        this.log.d( JSON.stringify( this.config.trans[ key ]) );
+        this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[ key ].name + ")begin" );
         try{
-          let trans = require( "../trans/" + this.config.trans[ i ].module + "/index.js" );
+          let trans = require( "../trans/" + this.config.trans[ key ].module + "/index.js" );
           Vue.use(trans.default);
           if( trans.default.getflow != null ){
-            this.config.trans[i].pagelist = trans.default.getflow();
+            this.config.trans[ key ].pagelist = trans.default.getflow();
           }else{
-            this.log.e( "start", "loadtrans", "trans(" + this.config.trans[i].name + ") not define listpage" );
+            this.log.e( "start", "loadtrans", "trans(" + this.config.trans[ key ].name + ") not define listpage" );
             continue;
           }
-          if( ( 0 == this.config.trans[i].type & 4 )  &&  ( trans.default.cando != null ) ) {
-            this.config.trans[i].cando = trans.default.cando;
+          if( ( 0 == this.config.trans[ key ].type & 4 )  &&  ( trans.default.cando != null ) ) {
+            this.config.trans[ key ].cando = trans.default.cando;
           }else{
-            this.config.trans[i].cando=function(){ return {tip:'',status:"ok"}};
+            this.config.trans[ key ].cando=function(){ return {tip:'',status:"ok"}};
           }
-          this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[i].name + ")success" );
+          this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[ key ].name + ")success" );
         }catch( e ){
-          this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[i].name + ") failed,reason" + e );
+          this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[ key ].name + ") failed,reason" + e );
         }
-        this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[i].name + ")end" );
+        this.log.i( "start", "loadtrans", "load trans(" + this.config.trans[ key ].name + ")end" );
       }
       this.loadtransstatus = true;
     },

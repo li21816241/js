@@ -130,7 +130,7 @@
             this.rpttimer = -1;
             this.status.status = "running";
             this.pageparam = {
-              from:reason,
+              witch:reason,
               data:data
             }
           }else{

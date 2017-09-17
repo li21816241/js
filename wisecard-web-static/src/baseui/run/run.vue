@@ -17,7 +17,7 @@
 export default{
   created(){
     console.log("转入正常运行状态");
-    for( var i = 0; i < this.config.trans.length; i++ ){
+    for( let i in this.config.trans ){
       if( this.config.trans[ i ].type & 1 ){
         this.showtrans[ this.config.trans[ i ].name ] = this.config.trans[ i ];
       }
@@ -63,7 +63,7 @@ export default{
       this.$emit( "pagechange", "transpage", "trans", {witch:button} );
     },
     oncardin(){
-      this.$emit( "pagechange", "transpage", "card", 0 );
+      this.$emit( "pagechange", "transpage", "cardreader", {witch:'cardreader'} );
     },
     transcheck(){
       for( var i = 0; i < this.testtrans.length; i++ ){

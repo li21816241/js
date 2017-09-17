@@ -14,6 +14,12 @@ const issuecard = {
         Vue.component("cardinfo", cardinfo)
         Vue.component("cardconfirm", cardconfirm)
         Vue.component("cardissue", cardissue)
+    },
+    getflow: function() {
+        return ['cardtip', 'cardid', 'cardphoto', 'cardfigure', 'cardinfo', 'cardconfirm', 'cardissue' ];
+    },
+    cando:function(){
+        return {tip:'',status:"ok"};
     }
 };
 export default issuecard;

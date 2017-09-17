@@ -1,7 +1,7 @@
 <template><section>
   <section>
     <div>
-      <component ref="trans" :is="showpage" id="mianview" :devs="devs" v-on:pagechange="pagechange" ></component>
+      <component ref="trans" :is="showpage" id="mianview" v-on:pagechange="pagechange" ></component>
     </div>
   </section>
 </template>
@@ -9,19 +9,20 @@
 export default{
   props:['transindex', 'pageparam'],
   created(){
-    console.log(this.prarm);
-    this.log.d( "transpage","created", "param" + JSON.stringify(this.prarm) );
-    this.curflow = this.config.trans;
-    this.showpage = this.curflow[ i ].pagelist[ 0 ];
-    this.log.i("transpage", "created", "trans begin by " + this.config.trans[transindex].name );
+    console.log(this.param);
+    this.log.d( "transpage","created", "param" + JSON.stringify(this.param) );
+    if( this.param.witch == "cardreader" ){
+      this.showpage = '';
+    }else{
+      
+    }
   },
   mounted(){
+    alert( "ok" );
     console.log( "进入流程" );
     this.log.i( "transpage", "mounted", "trans begin" );
     debugger;
-    if( this.$devs.getdevs().cardreader != null ){
-      alert( 'ok' );
-    }
+    
   },
   destroyed(){
     console.log( "退出流程" );
@@ -30,7 +31,8 @@ export default{
   data(){
     return{
       curflow:'',
-      prarm:this.pageparam
+      param:this.pageparam,
+      showpage:''
     }
   },
   computed:{
