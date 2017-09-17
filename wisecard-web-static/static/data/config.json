@@ -23,14 +23,14 @@
             "name":"pretrans",
             "pagelist":[],
             "module":"common",
-            "type":1,
+            "type":0,
             "cando":""
         },
         {
             "name":"query",
             "pagelist":[],
             "module":"query",
-            "type":1,
+            "type":0,
             "cando":""
         },
         {
