@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wisecard.sst.dao.AppInfoMapper">
+  <resultMap id="BaseResultMap" type="com.wisecard.sst.vo.dao.AppInfo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="termid" jdbcType="VARCHAR" property="termid" />
+    <result column="masterkey" jdbcType="VARCHAR" property="masterkey" />
+    <result column="pinkey" jdbcType="VARCHAR" property="pinkey" />
+    <result column="mackey" jdbcType="VARCHAR" property="mackey" />
+    <result column="whitecardcount" jdbcType="INTEGER" property="whitecardcount" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="serviceaddr" jdbcType="VARCHAR" property="serviceaddr" />
+    <result column="monitoraddr" jdbcType="VARCHAR" property="monitoraddr" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, termid, masterkey, pinkey, mackey, whitecardcount, version, serviceaddr, monitoraddr
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from app_infos
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from app_infos
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    insert into app_infos (id, termid, masterkey, 
+      pinkey, mackey, whitecardcount, 
+      version, serviceaddr, monitoraddr
+      )
+    values (#{id,jdbcType=VARCHAR}, #{termid,jdbcType=VARCHAR}, #{masterkey,jdbcType=VARCHAR}, 
+      #{pinkey,jdbcType=VARCHAR}, #{mackey,jdbcType=VARCHAR}, #{whitecardcount,jdbcType=INTEGER}, 
+      #{version,jdbcType=VARCHAR}, #{serviceaddr,jdbcType=VARCHAR}, #{monitoraddr,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    insert into app_infos
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="termid != null">
+        termid,
+      </if>
+      <if test="masterkey != null">
+        masterkey,
+      </if>
+      <if test="pinkey != null">
+        pinkey,
+      </if>
+      <if test="mackey != null">
+        mackey,
+      </if>
+      <if test="whitecardcount != null">
+        whitecardcount,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="serviceaddr != null">
+        serviceaddr,
+      </if>
+      <if test="monitoraddr != null">
+        monitoraddr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="termid != null">
+        #{termid,jdbcType=VARCHAR},
+      </if>
+      <if test="masterkey != null">
+        #{masterkey,jdbcType=VARCHAR},
+      </if>
+      <if test="pinkey != null">
+        #{pinkey,jdbcType=VARCHAR},
+      </if>
+      <if test="mackey != null">
+        #{mackey,jdbcType=VARCHAR},
+      </if>
+      <if test="whitecardcount != null">
+        #{whitecardcount,jdbcType=INTEGER},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceaddr != null">
+        #{serviceaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="monitoraddr != null">
+        #{monitoraddr,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    update app_infos
+    <set>
+      <if test="termid != null">
+        termid = #{termid,jdbcType=VARCHAR},
+      </if>
+      <if test="masterkey != null">
+        masterkey = #{masterkey,jdbcType=VARCHAR},
+      </if>
+      <if test="pinkey != null">
+        pinkey = #{pinkey,jdbcType=VARCHAR},
+      </if>
+      <if test="mackey != null">
+        mackey = #{mackey,jdbcType=VARCHAR},
+      </if>
+      <if test="whitecardcount != null">
+        whitecardcount = #{whitecardcount,jdbcType=INTEGER},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceaddr != null">
+        serviceaddr = #{serviceaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="monitoraddr != null">
+        monitoraddr = #{monitoraddr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    update app_infos
+    set termid = #{termid,jdbcType=VARCHAR},
+      masterkey = #{masterkey,jdbcType=VARCHAR},
+      pinkey = #{pinkey,jdbcType=VARCHAR},
+      mackey = #{mackey,jdbcType=VARCHAR},
+      whitecardcount = #{whitecardcount,jdbcType=INTEGER},
+      version = #{version,jdbcType=VARCHAR},
+      serviceaddr = #{serviceaddr,jdbcType=VARCHAR},
+      monitoraddr = #{monitoraddr,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.wisecard.sst.vo.dao.AppInfo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="termid" jdbcType="VARCHAR" property="termid" />
+    <result column="masterkey" jdbcType="VARCHAR" property="masterkey" />
+    <result column="pinkey" jdbcType="VARCHAR" property="pinkey" />
+    <result column="mackey" jdbcType="VARCHAR" property="mackey" />
+    <result column="whitecardcount" jdbcType="INTEGER" property="whitecardcount" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="serviceaddr" jdbcType="VARCHAR" property="serviceaddr" />
+    <result column="monitoraddr" jdbcType="VARCHAR" property="monitoraddr" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, termid, masterkey, pinkey, mackey, whitecardcount, version, serviceaddr, monitoraddr
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from app_infos
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from app_infos
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    insert into app_infos (id, termid, masterkey, 
+      pinkey, mackey, whitecardcount, 
+      version, serviceaddr, monitoraddr
+      )
+    values (#{id,jdbcType=VARCHAR}, #{termid,jdbcType=VARCHAR}, #{masterkey,jdbcType=VARCHAR}, 
+      #{pinkey,jdbcType=VARCHAR}, #{mackey,jdbcType=VARCHAR}, #{whitecardcount,jdbcType=INTEGER}, 
+      #{version,jdbcType=VARCHAR}, #{serviceaddr,jdbcType=VARCHAR}, #{monitoraddr,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    insert into app_infos
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="termid != null">
+        termid,
+      </if>
+      <if test="masterkey != null">
+        masterkey,
+      </if>
+      <if test="pinkey != null">
+        pinkey,
+      </if>
+      <if test="mackey != null">
+        mackey,
+      </if>
+      <if test="whitecardcount != null">
+        whitecardcount,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="serviceaddr != null">
+        serviceaddr,
+      </if>
+      <if test="monitoraddr != null">
+        monitoraddr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="termid != null">
+        #{termid,jdbcType=VARCHAR},
+      </if>
+      <if test="masterkey != null">
+        #{masterkey,jdbcType=VARCHAR},
+      </if>
+      <if test="pinkey != null">
+        #{pinkey,jdbcType=VARCHAR},
+      </if>
+      <if test="mackey != null">
+        #{mackey,jdbcType=VARCHAR},
+      </if>
+      <if test="whitecardcount != null">
+        #{whitecardcount,jdbcType=INTEGER},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceaddr != null">
+        #{serviceaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="monitoraddr != null">
+        #{monitoraddr,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    update app_infos
+    <set>
+      <if test="termid != null">
+        termid = #{termid,jdbcType=VARCHAR},
+      </if>
+      <if test="masterkey != null">
+        masterkey = #{masterkey,jdbcType=VARCHAR},
+      </if>
+      <if test="pinkey != null">
+        pinkey = #{pinkey,jdbcType=VARCHAR},
+      </if>
+      <if test="mackey != null">
+        mackey = #{mackey,jdbcType=VARCHAR},
+      </if>
+      <if test="whitecardcount != null">
+        whitecardcount = #{whitecardcount,jdbcType=INTEGER},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceaddr != null">
+        serviceaddr = #{serviceaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="monitoraddr != null">
+        monitoraddr = #{monitoraddr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    update app_infos
+    set termid = #{termid,jdbcType=VARCHAR},
+      masterkey = #{masterkey,jdbcType=VARCHAR},
+      pinkey = #{pinkey,jdbcType=VARCHAR},
+      mackey = #{mackey,jdbcType=VARCHAR},
+      whitecardcount = #{whitecardcount,jdbcType=INTEGER},
+      version = #{version,jdbcType=VARCHAR},
+      serviceaddr = #{serviceaddr,jdbcType=VARCHAR},
+      monitoraddr = #{monitoraddr,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.wisecard.sst.vo.dao.AppInfo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="termid" jdbcType="VARCHAR" property="termid" />
+    <result column="masterkey" jdbcType="VARCHAR" property="masterkey" />
+    <result column="pinkey" jdbcType="VARCHAR" property="pinkey" />
+    <result column="mackey" jdbcType="VARCHAR" property="mackey" />
+    <result column="whitecardcount" jdbcType="INTEGER" property="whitecardcount" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="serviceaddr" jdbcType="VARCHAR" property="serviceaddr" />
+    <result column="monitoraddr" jdbcType="VARCHAR" property="monitoraddr" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, termid, masterkey, pinkey, mackey, whitecardcount, version, serviceaddr, monitoraddr
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from app_infos
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from app_infos
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    insert into app_infos (id, termid, masterkey, 
+      pinkey, mackey, whitecardcount, 
+      version, serviceaddr, monitoraddr
+      )
+    values (#{id,jdbcType=VARCHAR}, #{termid,jdbcType=VARCHAR}, #{masterkey,jdbcType=VARCHAR}, 
+      #{pinkey,jdbcType=VARCHAR}, #{mackey,jdbcType=VARCHAR}, #{whitecardcount,jdbcType=INTEGER}, 
+      #{version,jdbcType=VARCHAR}, #{serviceaddr,jdbcType=VARCHAR}, #{monitoraddr,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    insert into app_infos
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="termid != null">
+        termid,
+      </if>
+      <if test="masterkey != null">
+        masterkey,
+      </if>
+      <if test="pinkey != null">
+        pinkey,
+      </if>
+      <if test="mackey != null">
+        mackey,
+      </if>
+      <if test="whitecardcount != null">
+        whitecardcount,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="serviceaddr != null">
+        serviceaddr,
+      </if>
+      <if test="monitoraddr != null">
+        monitoraddr,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="termid != null">
+        #{termid,jdbcType=VARCHAR},
+      </if>
+      <if test="masterkey != null">
+        #{masterkey,jdbcType=VARCHAR},
+      </if>
+      <if test="pinkey != null">
+        #{pinkey,jdbcType=VARCHAR},
+      </if>
+      <if test="mackey != null">
+        #{mackey,jdbcType=VARCHAR},
+      </if>
+      <if test="whitecardcount != null">
+        #{whitecardcount,jdbcType=INTEGER},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceaddr != null">
+        #{serviceaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="monitoraddr != null">
+        #{monitoraddr,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    update app_infos
+    <set>
+      <if test="termid != null">
+        termid = #{termid,jdbcType=VARCHAR},
+      </if>
+      <if test="masterkey != null">
+        masterkey = #{masterkey,jdbcType=VARCHAR},
+      </if>
+      <if test="pinkey != null">
+        pinkey = #{pinkey,jdbcType=VARCHAR},
+      </if>
+      <if test="mackey != null">
+        mackey = #{mackey,jdbcType=VARCHAR},
+      </if>
+      <if test="whitecardcount != null">
+        whitecardcount = #{whitecardcount,jdbcType=INTEGER},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceaddr != null">
+        serviceaddr = #{serviceaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="monitoraddr != null">
+        monitoraddr = #{monitoraddr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wisecard.sst.vo.dao.AppInfo">
+    update app_infos
+    set termid = #{termid,jdbcType=VARCHAR},
+      masterkey = #{masterkey,jdbcType=VARCHAR},
+      pinkey = #{pinkey,jdbcType=VARCHAR},
+      mackey = #{mackey,jdbcType=VARCHAR},
+      whitecardcount = #{whitecardcount,jdbcType=INTEGER},
+      version = #{version,jdbcType=VARCHAR},
+      serviceaddr = #{serviceaddr,jdbcType=VARCHAR},
+      monitoraddr = #{monitoraddr,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
