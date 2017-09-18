@@ -10,18 +10,27 @@ export default{
   props:['transindex', 'pageparam'],
   created(){
     console.log(this.param);
+    this.transname = this.param.data.witch;
     this.log.d( "transpage","created", "param" + JSON.stringify(this.param) );
     if( this.param.witch == "cardreader" ){
-      this.showpage = '';
-    }else{
-      
+      this.transname="pretrans";
+      console.log( "执行进卡后步骤" )
+      console.log(this.config.trans[ this.transname ] );
+    }else if( this.param.witch == "trans" ){
+      console.log( "执行直接业务" )
+      console.log(this.config.trans[ this.transname ] );
+    }else if( this.param.witch == "indirect " ){
+      console.log( "执行间接调用" );
+      //data:{ from,next}
+      console.log(this.config.trans[ this.transname ] );
     }
+    this.log.i( "transwrap", "created", "do " + JSON.stringify( this.config.trans[ this.transname ] ) );
+    curflow = this.config.trans[ this.transname ].pagelist;
+    pagechange( curflow[ 0 ] );
   },
   mounted(){
-    alert( "ok" );
     console.log( "进入流程" );
     this.log.i( "transpage", "mounted", "trans begin" );
-    debugger;
     
   },
   destroyed(){
@@ -32,7 +41,8 @@ export default{
     return{
       curflow:'',
       param:this.pageparam,
-      showpage:''
+      showpage:'',
+      transname:''
     }
   },
   computed:{
@@ -43,13 +53,15 @@ export default{
       this.log.i( "transpage", "pagechagen", "change page to:" + showpage);
       switch( reason ){
         case "cancel":
-          this.$emit("runpage", reason, 0 );
+          this.$emit( "pagechange", "runpage", reason, 0 );
           break;
         case "interrupt":
-          this.$emit("runpage", reason, 0 );
+          this.$emit( "pagechange", "runpage", reason, 0 );
           break;
         case "fault":
-          this.$emit( "pausepage", reason, 0 );
+          this.$emit( "pagechange", "pausepage", reason, 0 );
+          break;
+        case "indirect":
           break;
         default:
           this.showpage = nextpage;

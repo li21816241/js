@@ -36,7 +36,6 @@ export default{
   },
   mounted(){
     this.timer = setInterval( this.transcheck, 10000);
-    
   },
   destroyed(){
     clearInterval( this.timer );

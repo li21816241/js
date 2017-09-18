@@ -23,22 +23,19 @@
             "name":"pretrans",
             "pagelist":[],
             "module":"common",
-            "type":4,
-            "cando":""
+            "type":4
         },
         "query":{
             "name":"query",
             "pagelist":[],
             "module":"query",
-            "type":0,
-            "cando":""
+            "type":0
         },
         "issusecard":{
             "name":"issusecard",
             "pagelist":[],
             "module":"card",
-            "type":5,
-            "cando":""
+            "type":5
         }
     },
     "application":{

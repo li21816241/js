@@ -17,16 +17,6 @@ function getCookie(c_name) {
     }
     return "";
 }
-setInterval((obj) => {
-    var sid = getCookie('sid');
-    axios.get('/rest/session')
-        .then(function(res) {
-            console.log(res);
-        })
-        .catch(function(err) {
-            console.log(err);
-        })
-}, 30000);
 
 const webbase = {
     install: function(Vue) {}
