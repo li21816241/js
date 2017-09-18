@@ -8,7 +8,7 @@ public class TermInfo {
     private String devid;
 
     private String address;
-
+    
     private String descript;
 
     public String getId() {

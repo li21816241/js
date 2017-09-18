@@ -1,8 +1,10 @@
 package com.wisecard.sst.dao;
 
+import com.sun.tools.javac.util.List;
 import com.wisecard.sst.vo.dao.AppInfo;
 
-public interface AppInfoMapper {
+public interface IAppInfoMapper {
+	
     int deleteByPrimaryKey(String id);
 
     int insert(AppInfo record);
@@ -14,4 +16,6 @@ public interface AppInfoMapper {
     int updateByPrimaryKeySelective(AppInfo record);
 
     int updateByPrimaryKey(AppInfo record);
+    
+    List<AppInfo> getApps( String conditions );
 }

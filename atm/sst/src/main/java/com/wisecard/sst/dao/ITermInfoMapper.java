@@ -1,8 +1,9 @@
 package com.wisecard.sst.dao;
 
+import com.sun.tools.javac.util.List;
 import com.wisecard.sst.vo.dao.TermInfo;
 
-public interface TermInfoMapper {
+public interface ITermInfoMapper {
     int deleteByPrimaryKey(String id);
 
     int insert(TermInfo record);
@@ -14,4 +15,6 @@ public interface TermInfoMapper {
     int updateByPrimaryKeySelective(TermInfo record);
 
     int updateByPrimaryKey(TermInfo record);
+    
+    List<TermInfo>	getTerms(String conditions );
 }

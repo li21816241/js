@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wisecard.sst.dao.TransRecordMapper">
+<mapper namespace="com.wisecard.sst.dao.ITransRecordMapper">
   <resultMap id="BaseResultMap" type="com.wisecard.sst.vo.dao.TransRecord">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="appid" jdbcType="VARCHAR" property="appid" />
@@ -149,4 +149,11 @@
       amount = #{amount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="getRecrods" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from transrecords
+    where #{conditions,jdbcType=java.lang.String}
+  </select>
 </mapper>

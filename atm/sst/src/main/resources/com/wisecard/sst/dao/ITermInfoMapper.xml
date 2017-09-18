@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wisecard.sst.dao.TermInfoMapper">
+<mapper namespace="com.wisecard.sst.dao.ITermInfoMapper">
   <resultMap id="BaseResultMap" type="com.wisecard.sst.vo.dao.TermInfo">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="ip" jdbcType="VARCHAR" property="ip" />
@@ -268,4 +268,10 @@
       descript = #{descript,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+  <select id="getTerms" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from term_infos
+    where #{conditions,jdbcType=VARCHAR}
+  </select>
 </mapper>

@@ -60,4 +60,47 @@ public class DevInfo {
     public void setDescript(String descript) {
         this.descript = descript == null ? null : descript.trim();
     }
+    
+    static public String getDevName( int i ){
+    	switch( i ){
+    	case 1: return "cardreader";
+    	case 2: return "pinpad";
+    	case 4: return "receipt";
+    	case 8: return "a4printer";
+    	case 16: return "figure";
+    	case 32: return "qr";
+    	case 64: return "cam";
+    	case 128: return "siu";
+    	case 256: return "issusecard";
+    	}
+    	return "";
+    }
+    static public String getDevId( int i ){
+    	switch( i ){
+    	case 1: return "cardreader";
+    	case 2: return "pinpad";
+    	case 4: return "receipt";
+    	case 8: return "a4printer";
+    	case 16: return "figure";
+    	case 32: return "qr";
+    	case 64: return "cam";
+    	case 128: return "siu";
+    	case 256: return "issusecard";
+    	}
+    	return "";
+    }
+    static public int getDevType( int i ){
+    	switch( i ){
+    	case 1: return 1;
+    	case 2: return 2;
+    	case 4: return 0;
+    	case 8: return 1;
+    	case 16: return 0;
+    	case 32: return 1;
+    	case 64: return 1;
+    	case 128: return 1;
+    	case 256: return 1;
+    	}
+    	return 0;
+    }
 }

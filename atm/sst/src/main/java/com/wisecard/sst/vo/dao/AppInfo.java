@@ -18,6 +18,8 @@ public class AppInfo {
     private String serviceaddr;
 
     private String monitoraddr;
+    
+    private int suppertTrans;
 
     public String getId() {
         return id;
@@ -90,4 +92,33 @@ public class AppInfo {
     public void setMonitoraddr(String monitoraddr) {
         this.monitoraddr = monitoraddr == null ? null : monitoraddr.trim();
     }
+
+	public int getSuppertTrans() {
+		return suppertTrans;
+	}
+
+	public void setSuppertTrans(int suppertTrans) {
+		this.suppertTrans = suppertTrans;
+	}
+	
+	static public String getTransName( int i ){
+		switch( i ){
+			case 1: return "query";
+			case 2: return "pin";
+			case 4: return "issusecard";
+			default:
+				break;
+		}
+		return "";
+	}
+	static public String getTransModule( int i ){
+		switch( i ){
+			case 1: return "query";
+			case 2: return "pin";
+			case 4: return "issusecard";
+			default:
+				break;
+		}
+		return "";
+	}
 }

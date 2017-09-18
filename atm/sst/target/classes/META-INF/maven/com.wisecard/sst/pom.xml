@@ -36,10 +36,5 @@
       <artifactId>druid</artifactId>
       <version>1.0.26</version>
  	</dependency>
- 	<dependency>
-	    <groupId>org.mybatis.generator</groupId>
-	    <artifactId>mybatis-generator</artifactId>
-    <version>1.3.5</version>
-</dependency>
   </dependencies>
 </project>
