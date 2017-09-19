@@ -53,7 +53,7 @@ public class SstConfigController {
 			return null;
 		}
 		
-		List< AppInfo > list = appManagerService.gets( "termid=" + termInfo.getId() );
+		List< AppInfo > list = appManagerService.gets( "termid='" + termInfo.getId() + "'" );
 		if( list == null && list.size() == 0 ){
 			logger.error( "config error, can't find any matched appinfo" );
 			return null;
@@ -116,7 +116,7 @@ public class SstConfigController {
 	protected Map<String, TransInfo> getTransById( AppInfo appInfo) {
 		if( appInfo != null ){
 			HashMap< String, TransInfo > map = new HashMap<>();
-			int value = appInfo.getSuppertTrans();
+			int value = appInfo.getSupperttrans();
 			for( int i = 0;i < 31; i++ ){
 				int type = value & ( 0x01 << i );
 				if( type != 0 ){

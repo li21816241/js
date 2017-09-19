@@ -1,5 +1,7 @@
 package com.wisecard.sst.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +16,7 @@ import com.wisecard.sst.vo.TransResult;
 public class SstTransactController {
 
 	@RequestMapping(path = "/query")
-	public TransResult query( QueryRequest requestInfo){
+	public TransResult query( HttpServletRequest request, QueryRequest requestInfo){
 		
 		return null;
 	}
