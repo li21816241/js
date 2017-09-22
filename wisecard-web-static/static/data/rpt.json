@@ -1,4 +1,8 @@
 {
-    "status":"ok",
-    "version":"1.0"
+    "status": "ok",
+    "version": "1.0",
+    "updatemasterkey": false,
+    "updatepinkey": false,
+    "updatemackey": false,
+    "updateconfig": false
 }

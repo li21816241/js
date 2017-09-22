@@ -5,6 +5,7 @@ public class QueryRequest extends RequestInfo {
 	private String cardNo;
 	
 	private String queryType;
+	
 
 	public String getCardNo() {
 		return cardNo;

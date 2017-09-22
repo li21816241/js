@@ -1,12 +1,10 @@
-package com.wisecard.sst.vo;
+package com.wisecard.sst.trans.vo;
 
 import java.sql.Timestamp;
 
-public class TransResult {
-	
-	private int resultcode;
-	
-	private String reason;
+import com.wisecard.sst.vo.CommonResult;
+
+public class TransResult extends CommonResult{
 	
 	private int requestId;
 	
@@ -17,22 +15,6 @@ public class TransResult {
 	private String devId;
 	
 	private Object resultdata;
-
-	public int getResultcode() {
-		return resultcode;
-	}
-
-	public void setResultcode(int resultcode) {
-		this.resultcode = resultcode;
-	}
-
-	public String getReason() {
-		return reason;
-	}
-
-	public void setReason(String reason) {
-		this.reason = reason;
-	}
 
 	public int getRequestId() {
 		return requestId;
