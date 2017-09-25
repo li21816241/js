@@ -19,7 +19,7 @@ public class AppInfo {
 
     private String monitoraddr;
     
-    private int suppertTrans;
+    private int supperttrans;
 
     public String getId() {
         return id;
@@ -93,12 +93,12 @@ public class AppInfo {
         this.monitoraddr = monitoraddr == null ? null : monitoraddr.trim();
     }
 
-	public int getSuppertTrans() {
-		return suppertTrans;
+	public int getSupperttrans() {
+		return supperttrans;
 	}
 
-	public void setSuppertTrans(int suppertTrans) {
-		this.suppertTrans = suppertTrans;
+	public void setSupperttrans(int supperttrans) {
+		this.supperttrans = supperttrans;
 	}
 	
 	static public String getTransName( int i ){

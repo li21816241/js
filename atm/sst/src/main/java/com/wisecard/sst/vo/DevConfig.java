@@ -2,7 +2,9 @@ package com.wisecard.sst.vo;
 
 import java.util.Map;
 
-public class DevConfig {
+import com.fasterxml.jackson.databind.ser.std.SerializableSerializer;
+
+public class DevConfig extends CommonResult{
 	
 	private Map< String, DevModule >	modules;
 	
