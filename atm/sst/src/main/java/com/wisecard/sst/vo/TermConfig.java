@@ -21,6 +21,4 @@ public class TermConfig extends DevConfig{
 	public void setAppConfig(AppConfig appConfig) {
 		this.appConfig = appConfig;
 	}
-	
-	
 }
