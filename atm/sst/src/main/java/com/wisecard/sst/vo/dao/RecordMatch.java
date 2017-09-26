@@ -1,11 +1,7 @@
-package com.wisecard.sst.vo;
-
-
+package com.wisecard.sst.vo.dao;
 import java.sql.Timestamp;
 
-import com.wisecard.sst.vo.dao.RecordInfo;
-
-public class RecordMatch extends RecordInfo{
+public class RecordMatch extends TransRecord{
 
 	private Timestamp start;
 	

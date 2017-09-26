@@ -5,12 +5,71 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.validation.FieldError;
 
 import com.alibaba.druid.sql.ast.statement.SQLIfStatement.Else;
 
 public class class2sql {
 
+	private Object object;
+	
+	private Class<?> objcls;
+	
+	public class2sql( Object object ){
+		this.object = object;
+		objcls = this.object.getClass();
+	}
+	
+	public char get1(){
+		return '\'';
+	}
+	
+	public String get2( String field ){
+		return '\"' + field + '\"' + ' ';
+	}
+	
+	public String eq( String field ){
+		return get2( field ) + "=" + getValue(field);
+	}
+	
+	public String neq( String field ){
+		return get2( field ) + "!=" + getValue(field);
+	}
+	
+	public String like( String field ){
+		return "like " + getValue(field);
+	}
+	
+	public String like( String field, String val ){
+		return "like " + get1() + val + get1();
+	}
+	
+	public String gt(String field ){
+		return get2( field ) + ">" + getValue(field);
+	}
+	
+	public String le(String field ){
+		return get2( field ) + "<" + getValue(field);
+	}
+
+	
+	
+	private String getValue( String field ){
+		if( object == null )
+			return "";
+		try {
+			Field field2 = objcls.getDeclaredField( field );
+			Object object = field2.get( this.object );
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public String select( Object o ){
 		Class<?> cls = null; 
 		StringBuffer stringBuffer = new StringBuffer();

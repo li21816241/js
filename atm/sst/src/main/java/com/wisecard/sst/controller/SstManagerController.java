@@ -1,17 +1,21 @@
 package com.wisecard.sst.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.sun.tools.corba.se.idl.constExpr.Terminal;
 import com.sun.tools.doclets.formats.html.TagletWriterImpl;
-import com.wisecard.sst.dao.IRecordInfoMapper;
+import com.wisecard.sst.sao.ITransRecordService;
 import com.wisecard.sst.trans.vo.IssuseCardRequest;
 import com.wisecard.sst.vo.CommonResult;
-import com.wisecard.sst.vo.RecordMatch;
 import com.wisecard.sst.vo.dao.RecordInfo;
+import com.wisecard.sst.vo.dao.RecordMatch;
 import com.wisecard.sst.vo.dao.TermInfo;
 import com.wisecard.web.core.page.Pager;
 
@@ -20,7 +24,7 @@ import com.wisecard.web.core.page.Pager;
 public class SstManagerController {
 	
 	@Autowired
-	IRecordInfoMapper recordInfoMapper;
+	ITransRecordService transRecordService;
 	
 		
 	
@@ -54,15 +58,15 @@ public class SstManagerController {
 	}
 	
 	
-	@RequestMapping(path = "/record")
-	public RecordInfo getRecord( RecordMatch recordMatch ){
-		
-		recordInfoMapper.selectByPrimaryKey(id)
-	}
-	
 	@RequestMapping(path = "/records")
-	public Pager< RecordInfo > getRecords( Pager<RecordInfo> pager ){
-		Pager<RecordInfo> pager2;
-		return pager;
+	public Pager< RecordInfo > getRecord( RecordMatch recordMatch, Pager<RecordInfo> pager ){
+		StringBuffer stringBuffer = new StringBuffer();
+		if( recordMatch.getStart() != null && recordMatch.getEnd() != null ){
+			
+		}
+		Page<RecordInfo> page = PageHelper.startPage(pager.getCurrentPage(), 
+				pager.getPageSize()).doSelectPage(() -> transRecordService.getByRecordMatch(recordMatch));
+		return pager.from( page );
+		
 	}
 }

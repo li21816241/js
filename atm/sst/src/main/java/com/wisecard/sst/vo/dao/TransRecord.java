@@ -15,9 +15,9 @@ public class TransRecord {
 
     private Integer transtype;
 
-    private Integer cardno;
+    private String cardno;
 
-    private String psasn;
+    private String pansn;
 
     private Integer atc;
 
@@ -71,20 +71,20 @@ public class TransRecord {
         this.transtype = transtype;
     }
 
-    public Integer getCardno() {
+    public String getCardno() {
         return cardno;
     }
 
-    public void setCardno(Integer cardno) {
+    public void setCardno(String cardno) {
         this.cardno = cardno;
     }
 
-    public String getPsasn() {
-        return psasn;
+    public String getPansn() {
+        return pansn;
     }
 
-    public void setPsasn(String psasn) {
-        this.psasn = psasn == null ? null : psasn.trim();
+    public void setPansn(String psasn) {
+        this.pansn = psasn == null ? null : psasn.trim();
     }
 
     public Integer getAtc() {

@@ -8,13 +8,13 @@
     <result column="responseid" jdbcType="INTEGER" property="responseid" />
     <result column="transtime" jdbcType="TIMESTAMP" property="transtime" />
     <result column="transtype" jdbcType="INTEGER" property="transtype" />
-    <result column="cardno" jdbcType="INTEGER" property="cardno" />
-    <result column="psasn" jdbcType="VARCHAR" property="psasn" />
+    <result column="cardno" jdbcType="java.lang.String" property="cardno" />
+    <result column="pansn" jdbcType="VARCHAR" property="pansn" />
     <result column="atc" jdbcType="INTEGER" property="atc" />
     <result column="amount" jdbcType="INTEGER" property="amount" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, appid, requistid, responseid, transtime, transtype, cardno, psasn, atc, amount
+    id, appid, requistid, responseid, transtime, transtype, cardno, pansn, atc, amount
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -29,11 +29,11 @@
   <insert id="insert" parameterType="com.wisecard.sst.vo.dao.TransRecord">
     insert into transrecords (id, appid, requistid, 
       responseid, transtime, transtype, 
-      cardno, psasn, atc, 
+      cardno, pansn, atc, 
       amount)
     values (#{id,jdbcType=INTEGER}, #{appid,jdbcType=VARCHAR}, #{requistid,jdbcType=INTEGER}, 
       #{responseid,jdbcType=INTEGER}, #{transtime,jdbcType=TIMESTAMP}, #{transtype,jdbcType=INTEGER}, 
-      #{cardno,jdbcType=INTEGER}, #{psasn,jdbcType=VARCHAR}, #{atc,jdbcType=INTEGER}, 
+      #{cardno,jdbcType=java.lang.String}, #{pansn,jdbcType=VARCHAR}, #{atc,jdbcType=INTEGER}, 
       #{amount,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.wisecard.sst.vo.dao.TransRecord">
@@ -60,8 +60,8 @@
       <if test="cardno != null">
         cardno,
       </if>
-      <if test="psasn != null">
-        psasn,
+      <if test="pansn != null">
+        pansn,
       </if>
       <if test="atc != null">
         atc,
@@ -90,10 +90,10 @@
         #{transtype,jdbcType=INTEGER},
       </if>
       <if test="cardno != null">
-        #{cardno,jdbcType=INTEGER},
+        #{cardno,jdbcType=java.lang.String},
       </if>
-      <if test="psasn != null">
-        #{psasn,jdbcType=VARCHAR},
+      <if test="pansn != null">
+        #{pansn,jdbcType=VARCHAR},
       </if>
       <if test="atc != null">
         #{atc,jdbcType=INTEGER},
@@ -122,10 +122,10 @@
         transtype = #{transtype,jdbcType=INTEGER},
       </if>
       <if test="cardno != null">
-        cardno = #{cardno,jdbcType=INTEGER},
+        cardno = #{cardno,jdbcType=java.lang.String},
       </if>
-      <if test="psasn != null">
-        psasn = #{psasn,jdbcType=VARCHAR},
+      <if test="pansn != null">
+        pansn = #{pansn,jdbcType=VARCHAR},
       </if>
       <if test="atc != null">
         atc = #{atc,jdbcType=INTEGER},
@@ -143,17 +143,42 @@
       responseid = #{responseid,jdbcType=INTEGER},
       transtime = #{transtime,jdbcType=TIMESTAMP},
       transtype = #{transtype,jdbcType=INTEGER},
-      cardno = #{cardno,jdbcType=INTEGER},
-      psasn = #{psasn,jdbcType=VARCHAR},
+      cardno = #{cardno,jdbcType=java.lang.String},
+      pansn = #{pansn,jdbcType=VARCHAR},
       atc = #{atc,jdbcType=INTEGER},
       amount = #{amount,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
   
-  <select id="getRecrods" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="getRecords" parameterType="com.wisecard.sst.vo.dao.RecordMatch" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from transrecords
-    where #{conditions,jdbcType=java.lang.String}
+    where 1
+    <if test="start!=null and end!=null" >
+    	AND BETWEEN #{start,jdbcType=TIMESTAMP} AND #{end,jdbcType=TIMESTAMP}
+    </if>
+    <if test="transtime!=null and ( start==null and end==null)" >
+    	AND transtime=#{transtime!=null,jdbcType=TIMESTAMP}
+    </if>
+    <if test="cardno!=null">
+    	AND cardno=#{cardno,jdbcType=java.lang.String}
+    </if>
+    <if test="transtype!=null">
+    	AND transtype=#{transtype,jdbcType=Integer}
+    </if>
+    <if test="requistid!=null">
+    	AND requistid=#{requistid,jdbcType=Integer}
+    </if>
+    <if test="responseid!=null">
+    	AND responseid=#{responseid,jdbcType=Integer}
+    </if>
+  </select>
+  
+  <select id="gets" parameterType="java.lang.String" resultMap="BaseResultMap">
+  select 
+    <include refid="Base_Column_List" />
+    from transrecords
+    where #{conditions,jdbcType="java.lang.String"}
   </select>
 </mapper>

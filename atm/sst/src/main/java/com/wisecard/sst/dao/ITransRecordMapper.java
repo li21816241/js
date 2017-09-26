@@ -1,6 +1,8 @@
 package com.wisecard.sst.dao;
 
-import com.sun.tools.javac.util.List;
+import java.util.List;
+
+import com.wisecard.sst.vo.dao.RecordMatch;
 import com.wisecard.sst.vo.dao.TransRecord;
 
 public interface ITransRecordMapper {
@@ -17,5 +19,7 @@ public interface ITransRecordMapper {
 
     int updateByPrimaryKey(TransRecord record);
     
-    List<TransRecord> getRecords( String conditions );
+    List<TransRecord> getRecords( RecordMatch recordMatch );
+    
+    List<TransRecord> gets( String conditions);
 }
