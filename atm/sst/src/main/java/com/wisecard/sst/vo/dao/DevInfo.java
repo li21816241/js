@@ -1,6 +1,7 @@
 package com.wisecard.sst.vo.dao;
 
 public class DevInfo {
+	
     private String id;
 
     private String company;

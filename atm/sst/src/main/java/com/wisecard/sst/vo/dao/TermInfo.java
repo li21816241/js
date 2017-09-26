@@ -1,6 +1,7 @@
 package com.wisecard.sst.vo.dao;
 
 public class TermInfo {
+	
     private String id;
 
     private String ip;

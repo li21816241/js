@@ -1,6 +1,7 @@
 package com.wisecard.sst.vo.dao;
 
 public class AppInfo {
+	
     private String id;
 
     private String termid;

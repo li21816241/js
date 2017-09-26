@@ -10,8 +10,6 @@ public class TransResult extends CommonResult{
 	
 	private int resultid;
 	
-	private Timestamp timestamp;
-	
 	private String devId;
 	
 	private Object resultdata;
@@ -30,14 +28,6 @@ public class TransResult extends CommonResult{
 
 	public void setResultid(int resultid) {
 		this.resultid = resultid;
-	}
-
-	public Timestamp getTimestamp() {
-		return timestamp;
-	}
-
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
 	}
 
 	public String getDevId() {
