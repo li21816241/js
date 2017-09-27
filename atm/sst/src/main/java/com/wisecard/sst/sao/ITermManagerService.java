@@ -4,6 +4,7 @@ import com.sun.tools.javac.util.List;
 import com.wisecard.sst.vo.dao.TermInfo;
 
 public interface ITermManagerService {
+	
 	public TermInfo get( String id );
 	
 	public void update( TermInfo termInfo );

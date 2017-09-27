@@ -16,9 +16,6 @@ public class TermServices implements ITermManagerService{
 	
 	public TermInfo get( String id ){
 		TermInfo termInfo = termInfoMapper.selectByPrimaryKey( id );
-		if( termInfo == null ){
-			
-		}
 		return termInfo;
 	}
 	
